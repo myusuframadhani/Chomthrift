@@ -21,7 +21,7 @@ if (isset($_POST["sort"])) {
             <div class="card h-100 " style="width: 18rem;">
                 <img src="https://dj7u9rvtp3yka.cloudfront.net/products/PIM-1578905692978-49141390-6742-4188-8897-0f365f013a8f_v1-small.jpg" class="card-img-top" alt="...">
                 <div class="card-body ">
-                    <h5 class="card-title">' . $data["nama_fashion"] . '</h5>
+                    <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
                     <p class="card-text">' . $data["harga"] . '</p>
                     
@@ -66,7 +66,7 @@ if (isset($_POST["sort"])) {
             <div class="card h-100 " style="width: 18rem;">
                 <img src="https://dj7u9rvtp3yka.cloudfront.net/products/PIM-1578905692978-49141390-6742-4188-8897-0f365f013a8f_v1-small.jpg" class="card-img-top" alt="...">
                 <div class="card-body ">
-                    <h5 class="card-title">' . $data["nama_fashion"] . '</h5>
+                    <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
                     <p class="card-text">' . $data["harga"] . '</p>
                    
@@ -106,7 +106,7 @@ if (isset($_POST["sort"])) {
             <div class="card h-100 " style="width: 18rem;">
                 <img src="https://dj7u9rvtp3yka.cloudfront.net/products/PIM-1578905692978-49141390-6742-4188-8897-0f365f013a8f_v1-small.jpg" class="card-img-top" alt="...">
                 <div class="card-body ">
-                    <h5 class="card-title">' . $data["nama_fashion"] . '</h5>
+                    <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
                     <p class="card-text">' . $data["harga"] . '</p>
 
@@ -158,7 +158,7 @@ if (isset($_POST["sort"])) {
             <div class="card h-100 " style="width: 18rem;">
                 <img src="https://dj7u9rvtp3yka.cloudfront.net/products/PIM-1578905692978-49141390-6742-4188-8897-0f365f013a8f_v1-small.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">' . $data["nama_fashion"] . '</h5>
+                    <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
                     <p class="card-text">' . $data["harga"] . '</p>
                     
