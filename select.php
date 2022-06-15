@@ -26,7 +26,7 @@ if (isset($_POST["sort"])) {
                     <p class="card-text">' . $data["harga"] . '</p>
                     
                 <a href="#" class="btn mt-auto btn-primary">Go somewhere</a>
-                <a href="#" class="btn mt-auto btn-danger" id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')">Hapus</a>
+                <a href="#" class="btn mt-auto btn-danger" id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
                 </div>
             </div>
         </div>';
@@ -71,7 +71,7 @@ if (isset($_POST["sort"])) {
                     <p class="card-text">' . $data["harga"] . '</p>
                    
                 <a href="#" class="btn mt-auto btn-primary">Go somewhere</a>
-                <a href="#" class="btn mt-auto btn-danger" id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')">Hapus</a>
+                <a href="#" class="btn mt-auto btn-danger" id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
                 </div>
             </div>
         </div>';
@@ -111,7 +111,7 @@ if (isset($_POST["sort"])) {
                     <p class="card-text">' . $data["harga"] . '</p>
 
                 <a href="#" class="btn mt-auto btn-primary">Go somewhere</a>
-                <a href="#" class="btn mt-auto btn-danger" id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')">Hapus</a>
+                <a href="#" class="btn mt-auto btn-danger" id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
                 </div>
             </div>
         </div>';
@@ -163,7 +163,7 @@ if (isset($_POST["sort"])) {
                     <p class="card-text">' . $data["harga"] . '</p>
                     
                 <a href="#" class="btn mt-auto btn-primary">Go somewhere</a>
-                <a href="#" class="btn mt-auto btn-danger" id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')">Hapus</a>
+                <a href="#" class="btn mt-auto btn-danger" id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
                 </div>
             </div>
         </div>';
