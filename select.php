@@ -18,16 +18,17 @@ if (isset($_POST["sort"])) {
     while ($data = mysqli_fetch_array($result)) {
         $key = array_rand($arr);
         echo '
-        <div class="col-md-4 col-xxl-3 mb-4">
-            <div class="card h-100 " style="width: 18rem;">
+        <div class="col col-sm-12 col-md-6 col-lg-4 col-xxl-3">
+            <div class="card h-100 mx-auto" style="width: 18rem;">
                 <img src="./img/'.$key.'.png" class="card-img-top" alt="...">
-                <div class="card-body ">
+                <div class="card-body">
                     <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
-                    <p class="card-text">' . $data["harga"] . '</p>
-                    
-                <a href="#" class="btn mt-auto btn-primary">Go somewhere</a>
-                <a href="#" class="btn mt-auto btn-danger" id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
+                    <p class="card-text">Rp' . $data["harga"] . '</p>
+                    <div class="d-inline" style="position: absolute; bottom: 15px; right: 15px;">
+                        <a href="#" class="btn btn-primary"><i class="bi bi-pencil"></i></a>
+                        <a href="#" class="btn btn-danger"  id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
+                    </div>
                 </div>
             </div>
         </div>';
@@ -64,16 +65,17 @@ if (isset($_POST["sort"])) {
     while ($data = mysqli_fetch_array($result)) {
         $key = array_rand($arr);
         echo '
-        <div class="col-md-4 col-xxl-3 mb-4">
-            <div class="card h-100 " style="width: 18rem;">
+        <div class="col col-sm-12 col-md-6 col-lg-4 col-xxl-3">
+            <div class="card h-100 mx-auto" style="width: 18rem;">
                 <img src="./img/'.$key.'.png" class="card-img-top" alt="...">
-                <div class="card-body ">
+                <div class="card-body">
                     <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
                     <p class="card-text">' . $data["harga"] . '</p>
-                   
-                <a href="#" class="btn mt-auto btn-primary">Go somewhere</a>
-                <a href="#" class="btn mt-auto btn-danger" id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
+                    <div class="d-inline" style="position: absolute; bottom: 15px; right: 15px;">
+                        <a href="#" class="btn btn-primary"><i class="bi bi-pencil"></i></a>
+                        <a href="#" class="btn btn-danger"  id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
+                    </div>
                 </div>
             </div>
         </div>';
@@ -105,16 +107,17 @@ if (isset($_POST["sort"])) {
     while ($data = mysqli_fetch_array($result)) {
         $key = array_rand($arr);
         echo '
-        <div class="col-md-4 col-xxl-3 mb-4">
-            <div class="card h-100 " style="width: 18rem;">
+        <div class="col col-sm-12 col-md-6 col-lg-4 col-xxl-3">
+            <div class="card h-100 mx-auto" style="width: 18rem;">
                 <img src="./img/'.$key.'.png" class="card-img-top" alt="...">
-                <div class="card-body ">
+                <div class="card-body">
                     <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
                     <p class="card-text">' . $data["harga"] . '</p>
-
-                <a href="#" class="btn mt-auto btn-primary">Go somewhere</a>
-                <a href="#" class="btn mt-auto btn-danger" id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
+                    <div class="d-inline" style="position: absolute; bottom: 15px; right: 15px;">
+                        <a href="#" class="btn btn-primary"><i class="bi bi-pencil"></i></a>
+                        <a href="#" class="btn btn-danger"  id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
+                    </div>
                 </div>
             </div>
         </div>';
@@ -164,9 +167,9 @@ if (isset($_POST["sort"])) {
                 <div class="card-body">
                     <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
-                    <p class="card-text">' . $data["harga"] . '</p>
+                    <p class="card-text">Rp ' . number_format($data["harga"],2,",",".") . '</p>
                     <div class="d-inline" style="position: absolute; bottom: 15px; right: 15px;">
-                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="#" class="btn btn-primary"><i class="bi bi-pencil"></i></a>
                         <a href="#" class="btn btn-danger"  id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
                     </div>
                 </div>

@@ -30,11 +30,11 @@ require_once("db.php");
         <ul class="navbar-nav sidebar sidebar-white bg-primary accordion text-white shadow-lg pt-3" id="accordionSidebar">
     
             <li class="mt-5 mx-2">
-                <div>
-                    <h4><i class="bi bi-funnel me-2"></i>Filter</h4>
+                <div class="mx-2">
+                    <h4 class="fw-bold"><i class="bi bi-funnel me-2"></i>Filter</h4>
                 </div>
                 <!-- //!! >>> SORT <<< -->
-                <div class="mt-5 mx-2">
+                <div class="mt-3 mx-2">
                     <h5>Sorting</h5>
                     <div class="my-2">
                         <button class="btn btn-success mx-1" type="submit" id="AZ">A - Z</button>
@@ -102,10 +102,10 @@ require_once("db.php");
                 </div>
             </div>
             
-            <div class="row my-5" id="content"> 
+            <div class="row gy-5 mt-5" id="content"> 
 
             </div>
-            <div class="d-grid gap-2 mt-4 mx-5">
+            <div class="d-grid gap-2 mt-5 mx-5">
                 <button class="btn btn-primary shadow fw-bold my-auto halaman mx-3" type="submit" id="load-menu"><i class="bi bi-arrow-down-circle mx-2 fw-bold fs-5"></i>Load More</button>
             </div>
 
