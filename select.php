@@ -24,7 +24,7 @@ if (isset($_POST["sort"])) {
                 <div class="card-body">
                     <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
-                    <p class="card-text">Rp' . $data["harga"] . '</p>
+                    <p class="card-text">Rp ' . number_format($data["harga"],2,",",".") . '</p>
                     <div class="d-inline" style="position: absolute; bottom: 15px; right: 15px;">
                         <a href="#" class="btn btn-primary"><i class="bi bi-pencil"></i></a>
                         <a href="#" class="btn btn-danger"  id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
@@ -71,7 +71,7 @@ if (isset($_POST["sort"])) {
                 <div class="card-body">
                     <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
-                    <p class="card-text">' . $data["harga"] . '</p>
+                    <p class="card-text">Rp ' . number_format($data["harga"],2,",",".") . '</p>
                     <div class="d-inline" style="position: absolute; bottom: 15px; right: 15px;">
                         <a href="#" class="btn btn-primary"><i class="bi bi-pencil"></i></a>
                         <a href="#" class="btn btn-danger"  id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
@@ -113,7 +113,7 @@ if (isset($_POST["sort"])) {
                 <div class="card-body">
                     <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
-                    <p class="card-text">' . $data["harga"] . '</p>
+                    <p class="card-text">Rp ' . number_format($data["harga"],2,",",".") . '</p>
                     <div class="d-inline" style="position: absolute; bottom: 15px; right: 15px;">
                         <a href="#" class="btn btn-primary"><i class="bi bi-pencil"></i></a>
                         <a href="#" class="btn btn-danger"  id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
