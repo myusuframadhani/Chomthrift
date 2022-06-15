@@ -29,27 +29,45 @@ require_once("db.php");
     <div id="wrapper">
         <ul class="navbar-nav sidebar sidebar-white bg-primary accordion text-white shadow-lg pt-3" id="accordionSidebar">
     
-            <li class="mt-5">
+            <li class="mt-5 mx-2">
                 <div>
                     <h4><i class="bi bi-funnel me-2"></i>Filter</h4>
                 </div>
                 <!-- //!! >>> SORT <<< -->
-                <div class="mt-5">
-                    <button class="btn btn-success mx-1" type="submit" id="AZ">A - Z</button>
-                    <button class="btn btn-success mx-1" type="submit" id="ZA">Z - A</button>
-                    <br><br>
+                <div class="mt-5 mx-2">
+                    <h5>Sorting</h5>
+                    <div class="my-2">
+                        <button class="btn btn-success mx-1" type="submit" id="AZ">A - Z</button>
+                        <button class="btn btn-success mx-1" type="submit" id="ZA">Z - A</button>
+                    </div>
+                    <div class="my-2">
+                    </div>
+                    
+                    <hr class="sidebar-divider my-3 bg-white">
+
                     <h5>Size</h5>
-                    <button class="btn btn-dark mx-1" type="submit" id="S">   S   </button>
-                    <button class="btn btn-dark mx-1" type="submit" id="M">   M   </button>
-                    <button class="btn btn-dark mx-1" type="submit" id="L">   L   </button>
-                    <button class="btn btn-dark mx-1" type="submit" id="XL">  XL  </button>
-                    <button class="btn btn-dark mx-1" type="submit" id="XXL"> XXL </button>
-                    <br><br>
+                    <div class="my-2">
+                        <button class="btn btn-dark mx-1" type="submit" id="S">   S   </button>
+                        <button class="btn btn-dark mx-1" type="submit" id="M">   M   </button>
+                        <button class="btn btn-dark mx-1" type="submit" id="L">   L   </button>
+                    </div>
+                    <div class="my-2">
+                        <button class="btn btn-dark mx-1" type="submit" id="XL">  XL  </button>
+                        <button class="btn btn-dark mx-1" type="submit" id="XXL"> XXL </button>
+                    </div>
+                    
+                    <hr class="sidebar-divider my-3 bg-white">
+
                     <h5>Category</h5>
-                    <button class="btn btn-warning mx-1" type="submit" id="HODDIE">   Hoodie   </button>
-                    <button class="btn btn-warning mx-1" type="submit" id="SHIRT">   T-Shirt   </button>
-                    <button class="btn btn-warning mx-1" type="submit" id="FLANEL">   Flanel   </button>
-                    <button class="btn btn-warning mx-1" type="submit" id="CREWNECK">  Crewneck </button>
+                    <div class="my-2"><button class="btn btn-warning mx-1" type="submit" id="HODDIE">   Hoodie   </button></div>
+                    <div class="my-2"><button class="btn btn-warning mx-1" type="submit" id="SHIRT">   T-Shirt   </button></div>
+                    <div class="my-2">
+                        <button class="btn btn-warning mx-1" type="submit" id="FLANEL">   Flanel   </button>
+                    </div>
+                    <div class="my-2">
+                        <button class="btn btn-warning mx-1" type="submit" id="CREWNECK">  Crewneck </button>
+                    </div>
+                    
                 </div>
             </li>
     
