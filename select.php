@@ -122,7 +122,7 @@ if (isset($_POST["sort"])) {
     $output = '';
     if (isset($_POST["query"])) {
         $search = mysqli_real_escape_string($conn, $_POST["query"]);
-        $limit = 8;
+        $limit = 6;
         $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
@@ -135,9 +135,9 @@ if (isset($_POST["sort"])) {
         $res1 = $hasil->get_result();
         $row = $res1->fetch_assoc();
         $total_records = $row['jumlah'];
-        $total_records -= 8;
+        $total_records -= 6;
         $jumlah_page = ceil($total_records / $_POST["load"]);
-        $limit = 8;
+        $limit = 6;
         $limit += $_POST["load"];
         $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
         FROM ((fashion
@@ -145,7 +145,7 @@ if (isset($_POST["sort"])) {
         INNER JOIN size ON fashion.id_size = size.id_size ) ORDER BY nama_fashion ASC LIMIT 0, $limit";
 
     } else {
-        $limit = 8;
+        $limit = 6;
         $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)

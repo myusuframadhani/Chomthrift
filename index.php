@@ -58,13 +58,19 @@ require_once("db.php");
     
     <!-- //!! >>> TITLE DAN BODY <<< -->
     <div class="container py-5 mt-5">
-        <h1 class="text-center">Katalog Trift Shop</h1>
+        <h1 class="text-center text-black fw-bold">Katalog Chom Thrift</h1>
 
-        <p class="d-grid gap-2 d-md-block"><a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal">Tambah Catalog</a></p>
+        <div class="d-flex flex-row-reverse justify-content-between">
+            <div>
+                <p class="d-grid gap-2 d-md-block"><a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal">Tambah Produk</a></p>
+            </div>
+            <div>
+                <h4>filter</h4>
+            </div>
+        </div>
         
         <!-- //!! >>> SORT <<< -->
         <div class="">
-            <h4>filter</h4>
             <button class="btn btn-outline-primary mx-1" type="submit" id="ZA">Z - A</button>
             <button class="btn btn-outline-primary mx-1" type="submit" id="AZ">A - Z</button>
             <br><br>
