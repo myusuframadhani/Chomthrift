@@ -178,7 +178,7 @@ $(document).ready(function () {
   });
 
   //!! >>> PAGINATION LOAD MORE <<<
-  var halaman = 8;
+  var halaman = 6;
   $("#load-menu").click(function () {
     $.ajax({
       url: "select.php",
@@ -186,7 +186,7 @@ $(document).ready(function () {
       data: { load: halaman },
       success: function (data) {
         $("#content").html(data);
-        halaman += 8;
+        halaman += 6;
       },
     });
   });
