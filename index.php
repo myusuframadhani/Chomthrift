@@ -94,35 +94,14 @@ require_once("db.php");
 
         <!-- //!! >>> TITLE DAN BODY <<< -->
         <div class="container py-5 mt-5">
-            <h1 class="text-start text-black fw-bold mb-5">Dashboard</h1>
-
-            <div class="d-flex flex-row-reverse justify-content-between">
+            
+            <div class="d-flex justify-content-between">
+                <h1 class="text-start text-black fw-bold mb-5">Dashboard</h1>
                 <div>
                     <p class="d-grid gap-2 d-md-block"><a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal"><i class="fa-solid fa-shirt me-2"></i>Tambah Produk</a></p>
                 </div>
-                <div>
-                    <h4>Filter</h4>
-                </div>
             </div>
             
-            <!-- //!! >>> SORT <<< -->
-            <div class="">
-                <button class="btn btn-success mx-1" type="submit" id="AZ">A - Z</button>
-                <button class="btn btn-success mx-1" type="submit" id="ZA">Z - A</button>
-                <br><br>
-                <h5>Size</h5>
-                <button class="btn btn-primary mx-1" type="submit" id="S">   S   </button>
-                <button class="btn btn-primary mx-1" type="submit" id="M">   M   </button>
-                <button class="btn btn-primary mx-1" type="submit" id="L">   L   </button>
-                <button class="btn btn-primary mx-1" type="submit" id="XL">  XL  </button>
-                <button class="btn btn-primary mx-1" type="submit" id="XXL"> XXL </button>
-                <br><br>
-                <h5>Category</h5>
-                <button class="btn btn-warning mx-1" type="submit" id="HODDIE">   Hoodie   </button>
-                <button class="btn btn-warning mx-1" type="submit" id="SHIRT">   T-Shirt   </button>
-                <button class="btn btn-warning mx-1" type="submit" id="FLANEL">   Flanel   </button>
-                <button class="btn btn-warning mx-1" type="submit" id="CREWNECK">  Crewneck </button>
-            </div>
             <div class="row my-5" id="content"> 
 
             </div>
