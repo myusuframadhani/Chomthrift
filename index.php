@@ -75,10 +75,10 @@ require_once("db.php");
             <button class="btn btn-outline-primary mx-1" type="submit" id="XXL"> XXL </button>
             <br><br>
             <h5>categories</h5>
-            <button class="btn btn-outline-primary mx-1" type="submit" id="HODDIE">   hoddie   </button>
-            <button class="btn btn-outline-primary mx-1" type="submit" id="SHIRT">   shirt   </button>
-            <button class="btn btn-outline-primary mx-1" type="submit" id="FLANEL">   flanel   </button>
-            <button class="btn btn-outline-primary mx-1" type="submit" id="CREWNECK">  crewneck </button>
+            <button class="btn btn-outline-primary mx-1" type="submit" id="HODDIE">   Hoodie   </button>
+            <button class="btn btn-outline-primary mx-1" type="submit" id="SHIRT">   T-Shirt   </button>
+            <button class="btn btn-outline-primary mx-1" type="submit" id="FLANEL">   Flanel   </button>
+            <button class="btn btn-outline-primary mx-1" type="submit" id="CREWNECK">  Crewneck </button>
         </div>
         <div class="row my-5" id="content"> 
 
