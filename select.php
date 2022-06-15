@@ -1,6 +1,6 @@
 <?php
 require_once("db.php");
-
+$arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 if (isset($_POST["sort"])) {
     $query = '';
     if ($_POST["sort"] == "asc") {
@@ -16,10 +16,11 @@ if (isset($_POST["sort"])) {
     }
     $result = mysqli_query($conn, $query);
     while ($data = mysqli_fetch_array($result)) {
+        $key = array_rand($arr);
         echo '
         <div class="col-md-4 col-xxl-3 mb-4">
             <div class="card h-100 " style="width: 18rem;">
-                <img src="https://dj7u9rvtp3yka.cloudfront.net/products/PIM-1578905692978-49141390-6742-4188-8897-0f365f013a8f_v1-small.jpg" class="card-img-top" alt="...">
+                <img src="./img/'.$key.'.png" class="card-img-top" alt="...">
                 <div class="card-body ">
                     <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
@@ -61,10 +62,11 @@ if (isset($_POST["sort"])) {
     }
     $result = mysqli_query($conn, $query);
     while ($data = mysqli_fetch_array($result)) {
+        $key = array_rand($arr);
         echo '
         <div class="col-md-4 col-xxl-3 mb-4">
             <div class="card h-100 " style="width: 18rem;">
-                <img src="https://dj7u9rvtp3yka.cloudfront.net/products/PIM-1578905692978-49141390-6742-4188-8897-0f365f013a8f_v1-small.jpg" class="card-img-top" alt="...">
+                <img src="./img/'.$key.'.png" class="card-img-top" alt="...">
                 <div class="card-body ">
                     <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
@@ -101,10 +103,11 @@ if (isset($_POST["sort"])) {
     }
     $result = mysqli_query($conn, $query);
     while ($data = mysqli_fetch_array($result)) {
+        $key = array_rand($arr);
         echo '
         <div class="col-md-4 col-xxl-3 mb-4">
             <div class="card h-100 " style="width: 18rem;">
-                <img src="https://dj7u9rvtp3yka.cloudfront.net/products/PIM-1578905692978-49141390-6742-4188-8897-0f365f013a8f_v1-small.jpg" class="card-img-top" alt="...">
+                <img src="./img/'.$key.'.png" class="card-img-top" alt="...">
                 <div class="card-body ">
                     <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
@@ -153,10 +156,11 @@ if (isset($_POST["sort"])) {
     }
     $result = mysqli_query($conn, $query);
     while ($data = mysqli_fetch_array($result)) {
+        $key = array_rand($arr);
         $output .= '
         <div class="col-md-4 col-xxl-3 mb-4">
             <div class="card h-100 " style="width: 18rem;">
-                <img src="https://dj7u9rvtp3yka.cloudfront.net/products/PIM-1578905692978-49141390-6742-4188-8897-0f365f013a8f_v1-small.jpg" class="card-img-top" alt="...">
+                <img src="./img/'.$key.'.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-capitalize fw-bold">' . $data["nama_fashion"] . '</h5>
                     <p class="card-text">' . $data["ukuran"] . '</p>
