@@ -87,11 +87,11 @@ require_once("db.php");
             <button class="btn btn-outline-primary mx-1" type="submit" id="FLANEL">   Flanel   </button>
             <button class="btn btn-outline-primary mx-1" type="submit" id="CREWNECK">  Crewneck </button>
         </div>
-        <div class="row my-5" id="content"> 
+        <div class="row gy-5 mt-5" id="content"> 
 
         </div>
-        <div class="d-grid gap-2 mt-4 mx-5">
-            <button class="btn btn-primary shadow fw-bold my-auto halaman mx-3" type="submit" id="load-menu"><i class="bi bi-arrow-down-circle mx-2 fw-bold fs-5"></i>Load More</button>
+        <div class="d-grid gap-2 mt-4">
+            <button class="btn btn-primary shadow fw-bold my-auto halaman" type="submit" id="load-menu"><i class="bi bi-arrow-down-circle mx-2 fw-bold fs-5"></i>Load More</button>
         </div>
 
     </div>
