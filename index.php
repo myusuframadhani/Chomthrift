@@ -31,7 +31,8 @@ require_once("db.php");
     
             <li class="mx-2">
                 <div class="mt-1 mb-5">
-                    <img src="img/chomthrift.png" height="60" width="180" alt="Logo Web">
+                    <a href="./index.php"><img src="img/chomthrift.png" height="60" width="180" alt="Logo Web"></a>
+                    
                 </div>
                 <div class="mx-2">
                     <h4 class="fw-bold"><i class="bi bi-funnel me-2"></i>Filter</h4>
