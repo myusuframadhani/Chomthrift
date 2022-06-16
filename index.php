@@ -122,11 +122,11 @@ require_once("db.php");
                         <form>
                             <div class="mb-3">
                                 <label for="title" class="form-label">nama_fashion:</label>
-                                <input type="text" class="form-control" id="nama_fashion" name="nama_fashion" autocomplete="off">
+                                <input type="text" class="form-control" id="nama_fashion" name="nama_fashion" autocomplete="off" required>
                             </div>
                             <div class="mb-3">
                                 <label for="number" class="form-label">Harga:</label>
-                                <input type="number" class="form-control" min="0" max="9999999" name="harga" id="harga">
+                                <input type="number" class="form-control" min="0" max="9999999" name="harga" id="harga" required>
                             </div>
                             <div class="mb-3"> 
                                 <label for="kategori" class="col-form-label wajib">Kategori</label>
@@ -213,7 +213,7 @@ require_once("db.php");
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                <button type="button" class="btn text-white" id="update" style="background-color: #E0AA3E;">Edit</button>
+                                <button type="button" class="btn btn-primary" id="update">Edit</button>
                             </div>
                         </form>
                     </div>

@@ -73,11 +73,11 @@ $(document).ready(function () {
   load();
 
   $(document).on("click", "#editbutton", function () {
-    var id_fashion = $(this).attr("id-fashion");
-    var nama_fashion = $(this).attr("nama-fashion");
+    var id_fashion = $(this).attr("id_fashion");
+    var nama_fashion = $(this).attr("nama_fashion");
     var harga = $(this).attr("harga");
-    var id_categories = $(this).attr("id-categories");
-    var id_size = $(this).attr("id-size");
+    var id_categories = $(this).attr("id_categories");
+    var id_size = $(this).attr("id_size");
     $("#id_fashion_up").val(id_fashion);
     $("#nama_fashion_up").val(nama_fashion);
     $("#harga_up").val(harga);
