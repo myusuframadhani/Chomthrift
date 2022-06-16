@@ -4,12 +4,12 @@ $arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 if (isset($_POST["sort"])) {
     $query = '';
     if ($_POST["sort"] == "asc") {
-        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
+        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, fashion.id_categories, fashion.id_size, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
         INNER JOIN size ON fashion.id_size = size.id_size) ORDER BY nama_fashion ASC";
     } else {
-        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
+        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, fashion.id_categories, fashion.id_size, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
         INNER JOIN size ON fashion.id_size = size.id_size) ORDER BY nama_fashion DESC";
@@ -36,27 +36,27 @@ if (isset($_POST["sort"])) {
 } else if (isset($_POST["ukuran"])) {
     $query = '';
     if ($_POST["ukuran"] == "S") {
-        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
+        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, fashion.id_categories, fashion.id_size, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
         INNER JOIN size ON fashion.id_size = size.id_size) WHERE ukuran='S'";
     } else if ($_POST["ukuran"] == "M") {
-        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
+        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, fashion.id_categories, fashion.id_size, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
         INNER JOIN size ON fashion.id_size = size.id_size) WHERE ukuran='M'";
     } else if ($_POST["ukuran"] == "L") {
-        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
+        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, fashion.id_categories, fashion.id_size, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
         INNER JOIN size ON fashion.id_size = size.id_size) WHERE ukuran='L'";
     } else if ($_POST["ukuran"] == "XL") {
-        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
+        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, fashion.id_categories, fashion.id_size, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
         INNER JOIN size ON fashion.id_size = size.id_size) WHERE ukuran='XL'";
     } else {
-        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
+        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, fashion.id_categories, fashion.id_size, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
         INNER JOIN size ON fashion.id_size = size.id_size) WHERE ukuran='XXL'";
@@ -73,7 +73,13 @@ if (isset($_POST["sort"])) {
                     <p class="card-text">' . $data["ukuran"] . '</p>
                     <p class="card-text">Rp ' . number_format($data["harga"],2,",",".") . '</p>
                     <div class="d-inline" style="position: absolute; bottom: 15px; right: 15px;">
-                        <button data-bs-toggle="modal" data-backdrop="static" data-bs-target="#updatedata" id="editbutton" class="btn btn-primary"><i class="bi bi-pencil"></i></button>
+                        <button 
+                        id-fashion="' . $data['id_fashion'] . '"
+                        nama-fashion="' . $data['nama_fashion'] . '"
+                        harga="' . $data['harga'] . '"
+                        id-categories="' . $data['id_categories'] . '"
+                        id-size="' . $data['id_size'] . '"
+                        data-bs-toggle="modal" data-backdrop="static" data-bs-target="#updatedata" id="editbutton" class="btn btn-primary"><i class="bi bi-pencil"></i></button>
                         <a href="#" class="btn btn-danger"  id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
                     </div>
                 </div>
@@ -83,22 +89,22 @@ if (isset($_POST["sort"])) {
 } else if (isset($_POST["jenis_categories"])) {
     $query = '';
     if ($_POST["jenis_categories"] == "hoddie") {
-        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
+        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, fashion.id_categories, fashion.id_size, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
         INNER JOIN size ON fashion.id_size = size.id_size) WHERE jenis_categories='hoddie'";
     } else if ($_POST["jenis_categories"] == "shirt") {
-        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
+        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, fashion.id_categories, fashion.id_size, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
         INNER JOIN size ON fashion.id_size = size.id_size) WHERE jenis_categories='shirt'";
     } else if ($_POST["jenis_categories"] == "flanel") {
-        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
+        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, fashion.id_categories, fashion.id_size, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
         INNER JOIN size ON fashion.id_size = size.id_size) WHERE jenis_categories='flanel'";
     } else {
-        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
+        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, fashion.id_categories, fashion.id_size, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
         INNER JOIN size ON fashion.id_size = size.id_size) WHERE jenis_categories='crewneck'";
@@ -115,7 +121,13 @@ if (isset($_POST["sort"])) {
                     <p class="card-text">' . $data["ukuran"] . '</p>
                     <p class="card-text">Rp ' . number_format($data["harga"],2,",",".") . '</p>
                     <div class="d-inline" style="position: absolute; bottom: 15px; right: 15px;">
-                        <button data-bs-toggle="modal" data-backdrop="static" data-bs-target="#updatedata" id="editbutton" class="btn btn-primary"><i class="bi bi-pencil"></i></button>
+                        <button 
+                        id-fashion="' . $data['id_fashion'] . '"
+                        nama-fashion="' . $data['nama_fashion'] . '"
+                        harga="' . $data['harga'] . '"
+                        id-categories="' . $data['id_categories'] . '"
+                        id-size="' . $data['id_size'] . '"
+                        data-bs-toggle="modal" data-backdrop="static" data-bs-target="#updatedata" id="editbutton" class="btn btn-primary"><i class="bi bi-pencil"></i></button>
                         <a href="#" class="btn btn-danger"  id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
                     </div>
                 </div>
@@ -129,7 +141,7 @@ if (isset($_POST["sort"])) {
     if (isset($_POST["query"])) {
         $search = mysqli_real_escape_string($conn, $_POST["query"]);
         $limit = 6;
-        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
+        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, fashion.id_categories, fashion.id_size, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
         INNER JOIN size ON fashion.id_size = size.id_size) WHERE nama_fashion LIKE '%" . $search . "%' ORDER BY nama_fashion ASC LIMIT 0, $limit";
@@ -145,14 +157,14 @@ if (isset($_POST["sort"])) {
         $jumlah_page = ceil($total_records / $_POST["load"]);
         $limit = 6;
         $limit += $_POST["load"];
-        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
+        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, fashion.id_categories, fashion.id_size, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
         INNER JOIN size ON fashion.id_size = size.id_size ) ORDER BY nama_fashion ASC LIMIT 0, $limit";
 
     } else {
         $limit = 6;
-        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, categories.jenis_categories, size.ukuran
+        $query = "SELECT fashion.id_fashion, fashion.nama_fashion, fashion.harga, fashion.id_categories, fashion.id_size, categories.jenis_categories, size.ukuran
         FROM ((fashion
         INNER JOIN categories ON fashion.id_categories = categories.id_categories)
         INNER JOIN size ON fashion.id_size = size.id_size) ORDER BY nama_fashion ASC LIMIT 0, $limit";
@@ -169,7 +181,13 @@ if (isset($_POST["sort"])) {
                     <p class="card-text">' . $data["ukuran"] . '</p>
                     <p class="card-text">Rp ' . number_format($data["harga"],2,",",".") . '</p>
                     <div class="d-inline" style="position: absolute; bottom: 15px; right: 15px;">
-                        <button data-bs-toggle="modal" data-backdrop="static" data-bs-target="#updatedata" id="editbutton" class="btn btn-primary"><i class="bi bi-pencil"></i></button>
+                        <button 
+                        id-fashion="' . $data['id_fashion'] . '"
+                        nama-fashion="' . $data['nama_fashion'] . '"
+                        harga="' . $data['harga'] . '"
+                        id-categories="' . $data['id_categories'] . '"
+                        id-size="' . $data['id_size'] . '"
+                        data-bs-toggle="modal" data-backdrop="static" data-bs-target="#updatedata" id="editbutton" class="btn btn-primary"><i class="bi bi-pencil"></i></button>
                         <a href="#" class="btn btn-danger"  id="' . $data["id_fashion"] . '" onclick="hapus(' . $data["id_fashion"] . ')"><i class="bi bi-trash"></i></a>
                     </div>
                 </div>

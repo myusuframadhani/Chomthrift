@@ -29,7 +29,10 @@ require_once("db.php");
     <div id="wrapper">
         <ul class="navbar-nav sidebar sidebar-white bg-primary accordion text-white shadow-lg pt-3" id="accordionSidebar">
     
-            <li class="mt-5 mx-2">
+            <li class="mx-2">
+                <div class="mt-1 mb-5">
+                    <img src="img/chomthrift.png" height="60" width="180" alt="Logo Web">
+                </div>
                 <div class="mx-2">
                     <h4 class="fw-bold"><i class="bi bi-funnel me-2"></i>Filter</h4>
                 </div>
@@ -93,7 +96,7 @@ require_once("db.php");
         </nav>
 
         <!-- //!! >>> TITLE DAN BODY <<< -->
-        <div class="container py-5 mt-5">
+        <div class="container py-5">
             
             <div class="d-flex justify-content-between">
                 <h1 class="text-start text-black fw-bold mb-5">Dashboard</h1>
@@ -102,7 +105,7 @@ require_once("db.php");
                 </div>
             </div>
             
-            <div class="row gy-5 mt-5" id="content"> 
+            <div class="row gy-5 mt-3" id="content"> 
 
             </div>
             <div class="d-grid gap-2 mt-5 mx-5">
@@ -180,7 +183,7 @@ require_once("db.php");
                             </div>
 
                             <div class="mb-3">
-                            <label for="nama_fashion_up" class="form-label">nama_fashion:</label>
+                            <label for="nama_fashion_up" class="form-label">Nama Fashion:</label>
                             <input type="text" class="form-control" id="nama_fashion_up" name="nama_fashion" autocomplete="off">
                             </div>
 
@@ -192,7 +195,7 @@ require_once("db.php");
                             <div class="mb-3">
                                 <label for="id_categories_up" class="form-label">Kategori</label>
                                 <select class="form-select text-black" aria-label="Default select example" id="id_categories_up" name="id_categories">
-                                    <option value="1">Hoddie</option>
+                                    <option value="1">Hoodie</option>
                                     <option value="2">Shirt</option>
                                     <option value="3">Flanel</option>
                                     <option value="4">Crewneck</option>
