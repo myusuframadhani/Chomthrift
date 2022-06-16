@@ -11,8 +11,8 @@ $id_size = $_POST["id_size"];
 
 $query = "UPDATE fashion SET nama_fashion = '" . $nama_fashion . "'
     ,harga = '" . $harga. "'
-    ,id_categories = '" . $jenis_categories . "'
-    ,id_size = '" . $ukuran . "'
+    ,id_categories = '" . $id_categories . "'
+    ,id_size = '" . $id_size . "'
     WHERE id_fashion = '" . $id . "'";
 
 mysqli_query($conn, $query);

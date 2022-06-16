@@ -122,7 +122,7 @@ require_once("db.php");
                         <form>
                             <div class="mb-3">
                                 <label for="title" class="form-label">nama_fashion:</label>
-                                <input type="text" class="form-control" id="nama_fashion" name="nama_fashion" style="text-transform:uppercase">
+                                <input type="text" class="form-control" id="nama_fashion" name="nama_fashion" autocomplete="off">
                             </div>
                             <div class="mb-3">
                                 <label for="number" class="form-label">Harga:</label>
@@ -162,23 +162,65 @@ require_once("db.php");
                 </div>
             </div>
         </div>
-    </div>
 
-    </div>
+        <!-- Edit -->
+        <div class="modal fade" id="updatedata" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-black" id="exampleModalLabel">Edit Katalog</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
 
-    <!-- navbar -->
-    <!-- akhir navbar -->
-    
-    <!-- //!! >>> SEARCH <<< -->
-    <!-- <div class="d-flex flex-row-reverse my-3 mx-2">
-        <form class="d-flex col-4" method="POST">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_text" id="search_text">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+                            <div hidden class="mb-3">
+                                <label for="id_fashion_up" class="form-label"></label>
+                                <input type="text" class="form-control" id="id_fashion_up" name="id_fashion">
+                            </div>
 
-    </div> -->
-    
-   
+                            <div class="mb-3">
+                            <label for="nama_fashion_up" class="form-label">nama_fashion:</label>
+                            <input type="text" class="form-control" id="nama_fashion_up" name="nama_fashion" autocomplete="off">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="harga_up" class="form-label">Harga:</label>
+                                <input type="number" class="form-control" min="0" max="9999999" name="harga" id="harga_up">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="id_categories_up" class="form-label">Kategori</label>
+                                <select class="form-select text-black" aria-label="Default select example" id="id_categories_up" name="id_categories">
+                                    <option value="1">Hoddie</option>
+                                    <option value="2">Shirt</option>
+                                    <option value="3">Flanel</option>
+                                    <option value="4">Crewneck</option>
+                                </select>
+                            </div>
+
+                            <!-- Bahan Baku -->
+                            <div class="mb-3">
+                                <label for="id_size_up" class="form-label">Ukuran</label>
+                                <select class="form-select text-black" aria-label="Default select example" id="id_size_up" name="id_size">
+                                    <option value="1">S</option>
+                                    <option value="2">M</option>
+                                    <option value="5">L</option>
+                                    <option value="3">XL</option>
+                                    <option value="4">XXL</option>
+                                </select>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                <button type="button" class="btn text-white" id="update" style="background-color: #E0AA3E;">Edit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

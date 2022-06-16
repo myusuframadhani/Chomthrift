@@ -33,6 +33,58 @@ $(document).ready(function () {
   });
 
   load();
+
+  //!! >>> MENGUBAH DATA LEWAT CARD<<<
+
+  $("#update").click(function () {
+    $id_fashion = $("#id_fashion_up").val();
+    $nama_fashion = $("#nama_fashion_up").val();
+    $harga = $("#harga_up").val();
+    $id_categories = $("#id_categories_up").val();
+    $id_size = $("#id_size_up").val();
+
+    $.ajax({
+      url: "update.php",
+      method: "POST",
+      data: {
+        id_fashion: $id_fashion,
+        nama_fashion: $nama_fashion,
+        harga: $harga,
+        id_categories: $id_categories,
+        id_size: $id_size,
+      },
+      success: function (_) {
+        $("#updatedata").modal("hide");
+        $.ajax({
+          url: "select.php",
+          success: function (val) {
+            $("#content").html(val);
+          },
+        });
+        document.getElementById("id_fashion").value = "";
+        document.getElementById("nama_fashion").value = "";
+        document.getElementById("harga").value = "";
+        document.getElementById("id_categories").value = "";
+        document.getElementById("id_size").value = "";
+      },
+    });
+  });
+
+  load();
+
+  $(document).on("click", "#editbutton", function () {
+    var id_fashion = $(this).attr("id-fashion");
+    var nama_fashion = $(this).attr("nama-fashion");
+    var harga = $(this).attr("harga");
+    var id_categories = $(this).attr("id-categories");
+    var id_size = $(this).attr("id-size");
+    $("#id_fashion_up").val(id_fashion);
+    $("#nama_fashion_up").val(nama_fashion);
+    $("#harga_up").val(harga);
+    $(`#id_categories_up option[value=${id_categories}]`).attr("selected", "selected");
+    $(`#id_size_up option[value=${id_size}]`).attr("selected", "selected");
+  });
+
   //!! >>> MENGAMBIL DATA DARI DB <<<
   function load(query) {
     $.ajax({
